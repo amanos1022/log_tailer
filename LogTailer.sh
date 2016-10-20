@@ -7,7 +7,7 @@ function checkServerType {
     if [ $serverType = 'nginx' ]; then
         return 1
     fi
-    if [ $serverType = 'apache' ]; then
+    if [ $serverType = 'apache2' ]; then
         return 1
     fi
 
@@ -36,7 +36,7 @@ done
 
 checkServerType
 if [ $? -eq 0 ]; then
-    echo 'server type incorrect, please enter "apache" or "nginx"(default)'
+    echo 'server type incorrect, please enter "apache2" or "nginx"(default)'
     exit 0
 fi
 
